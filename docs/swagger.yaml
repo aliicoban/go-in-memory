@@ -1,0 +1,155 @@
+info:
+  contact: {}
+  schemes:
+paths:
+  /getAll:
+    post:
+      consumes:
+      - application/json
+      description: Get All Value
+      parameters:
+      - description: key
+        in: path
+        name: key
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: Get All Value"
+      tags:
+      - Get All Value
+  /deleteSingle/{key}:
+    post:
+      consumes:
+      - application/json
+      description: Delete Value by Key
+      parameters:
+      - description: key
+        in: path
+        name: key
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: DeleteSingle
+      tags:
+      - Delete Single
+  /flush:
+    post:
+      consumes:
+      - application/json
+      description: Delete All Data
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: Flush Data
+      tags:
+      - Flush Data
+  /set:
+    post:
+      consumes:
+      - multipart/form-data"
+      description: Add a new value to the store
+      parameters:
+      - description: 
+        value
+        in: formData
+        name: value
+        required: true
+        type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: string
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      summary: Set Value
+      tags:
+      - SetData
+      /get/{key}:
+        get:
+          consumes:
+          - application/json
+          description: Get Value
+          parameters:
+          - description: key
+            in: path
+            name: key
+            required: true
+            type: string
+          responses:
+            "200":
+              description: success
+              schema:
+                type: string
+            "400":
+              description: error
+              schema:
+                type: string
+            "404":
+              description: error
+              schema:
+                type: string
+            "500":
+              description: error
+              schema:
+                type: string
+          summary: Get Value
+          tags:
+          - GetData
+swagger: "2.0"
