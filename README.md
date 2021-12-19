@@ -19,11 +19,11 @@
 
 # Heroku Link
 
-https://go-case-deneme.herokuapp.com/
+https://go-in-memory.herokuapp.com/
 
 # Swagger Link
  
-https://go-case-deneme.herokuapp.com/swagger/index.html
+https://go-in-memory.herokuapp.com/swagger/index.html
 
 # Unit Test
 + (store_test.go, index_test.go)
@@ -58,9 +58,9 @@ go test --coverprofile=coverage.out && go tool cover -html=coverage.out  --> we 
   ```
 + Docker Container
     ``` 
-    docker build -t go-in-memorycase
+    docker build . -t go-in-memory
     ```
     
     ```
-    docker run -p 4444:4444 go-in-memorycase
+    docker run -p 4444:4444 go-in-memory
     ```
