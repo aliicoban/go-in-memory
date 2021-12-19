@@ -58,9 +58,9 @@ go test --coverprofile=coverage.out && go tool cover -html=coverage.out  --> we 
   ```
 + Docker Container
     ``` 
-    docker build -t go-in-memory
+    docker build -t go-in-memorycase
     ```
     
     ```
-    docker run -p 4444:4444 go-in-memory
+    docker run -p 4444:4444 go-in-memorycase
     ```
